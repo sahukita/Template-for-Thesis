@@ -1,0 +1,71 @@
+\documentclass[11pt,fleqn,a4paper]{article}
+\usepackage{luatexja} % 日本語を使えるようにする。
+\usepackage{newunicodechar} % 句読点の置き換え
+\newunicodechar{。}{．}
+\newunicodechar{、}{，}
+\usepackage{mathtools,amssymb,amsthm}
+\usepackage{bm} % ベクトルの表記など、ボールド体を使う為のパッケージ。使い方はここ(https://medemanabu.net/latex/vector/)を参照。
+\usepackage{physics} % 使い方はここ(https://qiita.com/HelloRusk/items/ce9f49e9b3fc0344ae23)を参照。
+\usepackage{ascmac}
+\usepackage{fancybox} % ascmacと共に、枠付き文章の為のパッケージ。使い方はここ(http://www.yamamo10.jp/yamamoto/comp/latex/make_doc/box/box.php)を参照。
+\usepackage[bottom]{footmisc} % 脚注をページ下部に固定。詳細はここ(https://konoyonohana.blog.fc2.com/blog-entry-289.html)を参照。
+\usepackage{graphicx}
+\usepackage{here}
+\usepackage{subcaption}
+\usepackage{indentfirst}
+\usepackage{tabularx}
+\usepackage{multirow}
+\usepackage{setspace} % \setstretch{}を使う為に必要。
+\usepackage{hyperref}
+\usepackage{natbib}
+
+\setlength{\topmargin}{-13mm}							% (-25/2)mm or (-1.0/2)in
+\setlength{\topskip}{0mm}
+\setlength{\footskip}{12mm}								% (25/2)mm or (1.0/2)in
+\setlength{\textheight}{247mm}						% (297-2*25)mm or (11.0-2*1.0)in
+\setlength{\textwidth}{160mm} 						% (210-2*25)mm or (8.5-2*1.0)in
+\setlength{\oddsidemargin}{0mm}
+\setlength{\evensidemargin}{0mm}
+
+\renewcommand{\topfraction}{0.9}					% max fraction of floats at top
+\renewcommand{\bottomfraction}{0.6}				% max fraction of floats at bottom
+\renewcommand{\dbltopfraction}{0.9}				% fit big float above 2-col. text
+\renewcommand{\textfraction}{0.1}					% allow minimal text w. figs
+\renewcommand{\floatpagefraction}{0.9}		% require fuller float pages
+\renewcommand{\dblfloatpagefraction}{0.9}	% require fuller float pages
+%\renewcommand{\figurename}{Fig.}
+
+\setcounter{topnumber}{2}
+\setcounter{bottomnumber}{2}
+\setcounter{totalnumber}{4}								% 2 may work better
+\setcounter{dbltopnumber}{2}							% for 2-column pages
+\setcounter{MaxMatrixCols}{10}
+
+\allowdisplaybreaks
+%\doublespacing
+\setstretch{1.25}
+
+\begin{document}
+
+\title{ % タイトルを書く。
+\thanks{}} % 内側の{}の中に謝辞を書く。
+\author{ % 著者の名前を書く。
+\footnote{}} % 内側の{}に所属を書く。
+\date{\today}
+\maketitle
+
+%\begin{abstract}
+%\noindent
+
+%\\ % 上の\noindentと左の\\の間の所にアブストを書く。
+%\\
+%\noindent\emph{JEL} Classification Numbers: E21, E24, J60. % ここ(https://www.aeaweb.org/econlit/jelCodes.php?view=jel)見て考える。
+%\newline\emph{Keywords:} Minimum wage; On-the-job search; Directed search.\\ % 先行研究を参考に考える。
+%\end{abstract}
+
+\setstretch{1.5}
+\section{} % 本文開始
+
+\bibliographystyle{econ-aea} % 使うには"econ-aea.bst"というファイルが必要。詳しくはここ(https://qiita.com/shiro_takeda/items/92adf0b20c501548355e)を参照。
+\bibliography{.bib} % 使っているbibファイルの名前を書く。
+\end{document}
